@@ -54,11 +54,11 @@ namespace accumulatorMachineSimulator
             this.label1 = new System.Windows.Forms.Label();
             this.plTopMenu = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.masToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.masToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cargarArchivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearArchivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.masToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.plLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -355,12 +355,6 @@ namespace accumulatorMachineSimulator
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // imageList1
-            // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
             // masToolStripMenuItem
             // 
             this.masToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -371,14 +365,6 @@ namespace accumulatorMachineSimulator
             this.masToolStripMenuItem.Name = "masToolStripMenuItem";
             this.masToolStripMenuItem.Size = new System.Drawing.Size(104, 69);
             this.masToolStripMenuItem.Text = "Proyecto";
-            // 
-            // masToolStripMenuItem1
-            // 
-            this.masToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.masToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
-            this.masToolStripMenuItem1.Name = "masToolStripMenuItem1";
-            this.masToolStripMenuItem1.Size = new System.Drawing.Size(74, 32);
-            this.masToolStripMenuItem1.Text = "Mas...";
             // 
             // cargarArchivoToolStripMenuItem
             // 
@@ -392,6 +378,20 @@ namespace accumulatorMachineSimulator
             this.crearArchivoToolStripMenuItem.Size = new System.Drawing.Size(225, 32);
             this.crearArchivoToolStripMenuItem.Text = "Crear archivo";
             // 
+            // masToolStripMenuItem1
+            // 
+            this.masToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.masToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.masToolStripMenuItem1.Name = "masToolStripMenuItem1";
+            this.masToolStripMenuItem1.Size = new System.Drawing.Size(74, 69);
+            this.masToolStripMenuItem1.Text = "Mas...";
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -404,6 +404,7 @@ namespace accumulatorMachineSimulator
             this.Name = "Form1";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.plLeft.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
