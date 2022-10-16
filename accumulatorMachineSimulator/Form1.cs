@@ -19,7 +19,7 @@ namespace accumulatorMachineSimulator
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            VariablexTxt.Text = "Si funciona, pero no va aqui XD";
+            VariablexTxt.Text = "Variable X";
         }
 
         private void btnPause_Click(object sender, EventArgs e)

@@ -33,7 +33,15 @@ namespace accumulatorMachineSimulator
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.plLeft = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.txtCodif = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.VariableZtxt = new System.Windows.Forms.TextBox();
+            this.VariableYtxt = new System.Windows.Forms.TextBox();
+            this.VariablexTxt = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.plPlayer = new System.Windows.Forms.Panel();
             this.btnStop = new System.Windows.Forms.PictureBox();
             this.btnPause = new System.Windows.Forms.PictureBox();
@@ -45,20 +53,12 @@ namespace accumulatorMachineSimulator
             this.console = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.plTopMenu = new System.Windows.Forms.Panel();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.VariablexTxt = new System.Windows.Forms.TextBox();
-            this.VariableYtxt = new System.Windows.Forms.TextBox();
-            this.VariableZtxt = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.MenuACC1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.vARIABLESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mEMORIAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sTOREToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtCodif = new System.Windows.Forms.RichTextBox();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.masToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.masToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cargarArchivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearArchivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.plLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -114,6 +114,15 @@ namespace accumulatorMachineSimulator
             this.splitContainer1.SplitterDistance = 355;
             this.splitContainer1.TabIndex = 1;
             // 
+            // txtCodif
+            // 
+            this.txtCodif.Location = new System.Drawing.Point(11, 42);
+            this.txtCodif.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCodif.Name = "txtCodif";
+            this.txtCodif.Size = new System.Drawing.Size(341, 729);
+            this.txtCodif.TabIndex = 2;
+            this.txtCodif.Text = "";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -123,6 +132,77 @@ namespace accumulatorMachineSimulator
             this.label2.Size = new System.Drawing.Size(131, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "Codificación";
+            // 
+            // VariableZtxt
+            // 
+            this.VariableZtxt.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.VariableZtxt.Location = new System.Drawing.Point(61, 463);
+            this.VariableZtxt.Name = "VariableZtxt";
+            this.VariableZtxt.Size = new System.Drawing.Size(155, 22);
+            this.VariableZtxt.TabIndex = 8;
+            this.VariableZtxt.TextChanged += new System.EventHandler(this.VariableZtxt_TextChanged);
+            // 
+            // VariableYtxt
+            // 
+            this.VariableYtxt.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.VariableYtxt.Location = new System.Drawing.Point(61, 424);
+            this.VariableYtxt.Name = "VariableYtxt";
+            this.VariableYtxt.Size = new System.Drawing.Size(155, 22);
+            this.VariableYtxt.TabIndex = 7;
+            this.VariableYtxt.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // VariablexTxt
+            // 
+            this.VariablexTxt.Location = new System.Drawing.Point(61, 383);
+            this.VariablexTxt.Multiline = true;
+            this.VariablexTxt.Name = "VariablexTxt";
+            this.VariablexTxt.Size = new System.Drawing.Size(155, 23);
+            this.VariablexTxt.TabIndex = 6;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label6.Location = new System.Drawing.Point(3, 459);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(48, 25);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "z = ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label5.Location = new System.Drawing.Point(3, 420);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 25);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "y = ";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label4.Location = new System.Drawing.Point(3, 382);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(48, 25);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "x = ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 347);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(110, 25);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Variables:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // plPlayer
             // 
@@ -185,7 +265,7 @@ namespace accumulatorMachineSimulator
             this.panel1.Location = new System.Drawing.Point(741, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(299, 605);
+            this.panel1.Size = new System.Drawing.Size(383, 605);
             this.panel1.TabIndex = 1;
             // 
             // plCpu
@@ -195,7 +275,7 @@ namespace accumulatorMachineSimulator
             this.plCpu.Location = new System.Drawing.Point(0, 73);
             this.plCpu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.plCpu.Name = "plCpu";
-            this.plCpu.Size = new System.Drawing.Size(299, 297);
+            this.plCpu.Size = new System.Drawing.Size(383, 297);
             this.plCpu.TabIndex = 2;
             // 
             // pictureBox1
@@ -207,7 +287,7 @@ namespace accumulatorMachineSimulator
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(299, 297);
+            this.pictureBox1.Size = new System.Drawing.Size(383, 297);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -222,7 +302,7 @@ namespace accumulatorMachineSimulator
             this.plInfo.Location = new System.Drawing.Point(0, 370);
             this.plInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.plInfo.Name = "plInfo";
-            this.plInfo.Size = new System.Drawing.Size(299, 235);
+            this.plInfo.Size = new System.Drawing.Size(383, 235);
             this.plInfo.TabIndex = 1;
             // 
             // console
@@ -233,7 +313,7 @@ namespace accumulatorMachineSimulator
             this.console.Location = new System.Drawing.Point(12, 36);
             this.console.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.console.Name = "console";
-            this.console.Size = new System.Drawing.Size(277, 187);
+            this.console.Size = new System.Drawing.Size(361, 187);
             this.console.TabIndex = 1;
             this.console.Text = "";
             // 
@@ -255,8 +335,25 @@ namespace accumulatorMachineSimulator
             this.plTopMenu.Location = new System.Drawing.Point(0, 0);
             this.plTopMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.plTopMenu.Name = "plTopMenu";
-            this.plTopMenu.Size = new System.Drawing.Size(299, 73);
+            this.plTopMenu.Size = new System.Drawing.Size(383, 73);
             this.plTopMenu.TabIndex = 0;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.masToolStripMenuItem,
+            this.masToolStripMenuItem1});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.menuStrip1.Size = new System.Drawing.Size(383, 73);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
             // 
             // imageList1
             // 
@@ -264,134 +361,42 @@ namespace accumulatorMachineSimulator
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // label3
+            // masToolStripMenuItem
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 347);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 25);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Variables:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.masToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cargarArchivoToolStripMenuItem,
+            this.crearArchivoToolStripMenuItem});
+            this.masToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.masToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.masToolStripMenuItem.Name = "masToolStripMenuItem";
+            this.masToolStripMenuItem.Size = new System.Drawing.Size(104, 69);
+            this.masToolStripMenuItem.Text = "Proyecto";
             // 
-            // label4
+            // masToolStripMenuItem1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label4.Location = new System.Drawing.Point(3, 382);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 25);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "x = ";
+            this.masToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.masToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.masToolStripMenuItem1.Name = "masToolStripMenuItem1";
+            this.masToolStripMenuItem1.Size = new System.Drawing.Size(74, 32);
+            this.masToolStripMenuItem1.Text = "Mas...";
             // 
-            // label5
+            // cargarArchivoToolStripMenuItem
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label5.Location = new System.Drawing.Point(3, 420);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 25);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "y = ";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.cargarArchivoToolStripMenuItem.Name = "cargarArchivoToolStripMenuItem";
+            this.cargarArchivoToolStripMenuItem.Size = new System.Drawing.Size(225, 32);
+            this.cargarArchivoToolStripMenuItem.Text = "Cargar archivo";
             // 
-            // label6
+            // crearArchivoToolStripMenuItem
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label6.Location = new System.Drawing.Point(3, 459);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 25);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "z = ";
-            // 
-            // VariablexTxt
-            // 
-            this.VariablexTxt.Location = new System.Drawing.Point(61, 383);
-            this.VariablexTxt.Multiline = true;
-            this.VariablexTxt.Name = "VariablexTxt";
-            this.VariablexTxt.Size = new System.Drawing.Size(155, 23);
-            this.VariablexTxt.TabIndex = 6;
-            // 
-            // VariableYtxt
-            // 
-            this.VariableYtxt.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.VariableYtxt.Location = new System.Drawing.Point(61, 424);
-            this.VariableYtxt.Name = "VariableYtxt";
-            this.VariableYtxt.Size = new System.Drawing.Size(155, 22);
-            this.VariableYtxt.TabIndex = 7;
-            this.VariableYtxt.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // VariableZtxt
-            // 
-            this.VariableZtxt.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.VariableZtxt.Location = new System.Drawing.Point(61, 463);
-            this.VariableZtxt.Name = "VariableZtxt";
-            this.VariableZtxt.Size = new System.Drawing.Size(155, 22);
-            this.VariableZtxt.TabIndex = 8;
-            this.VariableZtxt.TextChanged += new System.EventHandler(this.VariableZtxt_TextChanged);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MenuACC1});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(299, 68);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // MenuACC1
-            // 
-            this.MenuACC1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.vARIABLESToolStripMenuItem,
-            this.mEMORIAToolStripMenuItem,
-            this.sTOREToolStripMenuItem});
-            this.MenuACC1.Font = new System.Drawing.Font("Segoe UI Symbol", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MenuACC1.Image = ((System.Drawing.Image)(resources.GetObject("MenuACC1.Image")));
-            this.MenuACC1.Name = "MenuACC1";
-            this.MenuACC1.Size = new System.Drawing.Size(255, 64);
-            this.MenuACC1.Text = "Ver mas...";
-            // 
-            // vARIABLESToolStripMenuItem
-            // 
-            this.vARIABLESToolStripMenuItem.Name = "vARIABLESToolStripMenuItem";
-            this.vARIABLESToolStripMenuItem.Size = new System.Drawing.Size(345, 64);
-            this.vARIABLESToolStripMenuItem.Text = "VARIABLES";
-            // 
-            // mEMORIAToolStripMenuItem
-            // 
-            this.mEMORIAToolStripMenuItem.Name = "mEMORIAToolStripMenuItem";
-            this.mEMORIAToolStripMenuItem.Size = new System.Drawing.Size(345, 64);
-            this.mEMORIAToolStripMenuItem.Text = "MEMORIA";
-            // 
-            // sTOREToolStripMenuItem
-            // 
-            this.sTOREToolStripMenuItem.Name = "sTOREToolStripMenuItem";
-            this.sTOREToolStripMenuItem.Size = new System.Drawing.Size(345, 64);
-            this.sTOREToolStripMenuItem.Text = "STORE";
-            // 
-            // txtCodif
-            // 
-            this.txtCodif.Location = new System.Drawing.Point(11, 42);
-            this.txtCodif.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtCodif.Name = "txtCodif";
-            this.txtCodif.Size = new System.Drawing.Size(341, 729);
-            this.txtCodif.TabIndex = 2;
-            this.txtCodif.Text = "";
+            this.crearArchivoToolStripMenuItem.Name = "crearArchivoToolStripMenuItem";
+            this.crearArchivoToolStripMenuItem.Size = new System.Drawing.Size(225, 32);
+            this.crearArchivoToolStripMenuItem.Text = "Crear archivo";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1040, 605);
+            this.ClientSize = new System.Drawing.Size(1124, 605);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.plLeft);
             this.MainMenuStrip = this.menuStrip1;
@@ -448,11 +453,11 @@ namespace accumulatorMachineSimulator
         private System.Windows.Forms.TextBox VariablexTxt;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem MenuACC1;
-        private System.Windows.Forms.ToolStripMenuItem vARIABLESToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mEMORIAToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sTOREToolStripMenuItem;
         private System.Windows.Forms.RichTextBox txtCodif;
+        private System.Windows.Forms.ToolStripMenuItem masToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem masToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem cargarArchivoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem crearArchivoToolStripMenuItem;
     }
 }
 
